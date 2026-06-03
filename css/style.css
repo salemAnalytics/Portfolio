@@ -1,0 +1,174 @@
+:root {
+    --primary: #0f172a;
+    --accent: #38bdf8;
+    --secondary: #ff9f43;
+    --bg-light: #f8fafc;
+    --text-dark: #1e293b;
+    --white: #ffffff;
+    --transition: 0.3s ease;
+    
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; list-style: none; user-select: none;}
+body { font-family: 'Cairo', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+/* Navbar */
+.navbar { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); padding: 15px 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 25px; }
+.nav-links a { color: var(--primary); font-weight: 600; transition: var(--transition); }
+.nav-links a:hover { color: var(--accent); }
+.header-socials a { color: var(--primary); margin-right: 15px; font-size: 1.2rem; }
+.menu-icon { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
+
+/* Hero */
+.hero { height: 100vh; background: radial-gradient(circle at top right, #1e293b, #0f172a); display: flex; align-items: center; color: white; text-align: center; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.highlight { color: var(--accent); }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+.hero-btns { display: flex; justify-content: center; gap: 15px; }
+.btn { padding: 12px 30px; border-radius: 8px; font-weight: bold; transition: var(--transition); display: inline-block; }
+.btn-primary { background: var(--accent); color: var(--primary); }
+.btn-outline { border: 2px solid var(--accent); color: var(--accent); }
+.btn:hover { transform: translateY(-3px); }
+
+/* Skills */
+.skills { padding: 80px 0; background: var(--bg-light); }
+.section-header { text-align: center; font-size: 2.5rem; margin-bottom: 30px; }
+.skill-category-title { font-size: 1.8rem; margin: 30px 0; border-right: 5px solid var(--accent); padding-right: 15px; }
+.skill-category-title.secondary { border-right-color: var(--secondary); }
+.skills-groups-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.skill-group { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.skill-item { margin-bottom: 12px; font-size: 0.9rem; border-right: 2px solid #f1f5f9; padding-right: 10px; }
+.skill-item strong { color: var(--primary); display: block; margin-bottom: 2px; }
+.soft-skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.soft-card { background: white; padding: 25px; border-radius: 10px; text-align: center; border: 1px solid #eee; transition: var(--transition); }
+.soft-card i { font-size: 2rem; color: var(--secondary); margin-bottom: 15px; }
+
+/* Dashboard & Pills */
+.projects { padding: 80px 0; }
+.dashboard-container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.dashboard-title { text-align: center; margin-bottom: 10px; font-size: 2rem; }
+.project-desc { text-align: center; margin-bottom: 20px; color: #64748b; }
+.dashboard-wrapper { position: relative; padding-top: 65%; overflow: hidden; border-radius: 15px; background: #000; }
+.dashboard-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.project-details-pills { display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap; }
+.pill { background: #e2e8f0; padding: 12px 25px; border-radius: 50px; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; color: var(--primary); font-weight: 600; }
+.pill i { color: var(--accent); }
+
+/* Footer & WhatsApp */
+.footer { background: var(--primary); color: white; padding: 60px 0 20px; text-align: center; }
+.contact-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+.contact-links a { color: white; font-weight: bold; }
+.footer-socials a { color: white; font-size: 1.8rem; margin: 0 15px; }
+.copyright { margin-top: 30px; opacity: 0.6; font-size: 0.8rem; }
+.whatsapp-float { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+/* Mobile Menu Logic */
+@media (max-width: 768px) {
+    .menu-icon { display: block !important; }
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 15px;
+    }
+    .nav-links.active { display: flex !important; } /* Force display when active */
+    
+    .hero h1 { font-size: 2.2rem; padding: 0 10px; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .btn { width: 85%; }
+    .dashboard-wrapper { padding-top: 80%; }
+    .pill { width: 100%; justify-content: center; }
+}
+/* الإعدادات الأساسية لضمان عمل الهيدر */
+:root {
+    --primary: #0f172a;
+    --accent: #38bdf8;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; }
+
+/* تنسيق النافبار الافتراضي (Desktop) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* مهم جداً لتموضع القائمة في الموبايل */
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+.logo span { color: var(--accent); }
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.menu-icon {
+    display: none; /* مخفي في الكمبيوتر */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+/* --- وضع الموبايل (Responsive) --- */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* إظهار زر المنيو */
+    }
+
+    .nav-links {
+        display: none; /* إخفاء القائمة افتراضياً في الموبايل */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* تظهر مباشرة تحت النافبار */
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* هذه الفئة سيتم إضافتها بواسطة JavaScript عند الضغط */
+    .nav-links.active {
+        display: flex !important; 
+    }
+
+    .header-socials {
+        display: none; /* إخفاء أيقونات السوشيال في الهيدر في الموبايل لتقليل الزحمة */
+    }
+}
+
+/* (باقي كود التصميم الخاص بالهيرو والمهارات والمشاريع يوضع هنا) */
