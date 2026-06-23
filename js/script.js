@@ -1,27 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- 1. Custom Mouse Follower Animation ---
+  // 1. Mouse Follower
   const dot = document.querySelector(".cursor-dot");
   const outline = document.querySelector(".cursor-outline");
-
-  window.addEventListener("mousemove", function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    // حركة النقطة الصغيرة (تتبع فوري)
-    dot.style.left = `${posX}px`;
-    dot.style.top = `${posY}px`;
-
-    // حركة الدائرة الكبيرة (تتبع انسيابي)
+  window.addEventListener("mousemove", (e) => {
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
     outline.animate(
-      {
-        left: `${posX}px`,
-        top: `${posY}px`,
-      },
-      { duration: 500, fill: "forwards" },
+      { left: `${e.clientX}px`, top: `${e.clientY}px` },
+      { duration: 400, fill: "forwards" },
     );
   });
 
-  // --- 2. Translation Dictionary ---
+  // 2. Translation Dictionary
   const translations = {
     en: {
       title: "Ahmed Salem | Data Analyst",
@@ -37,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "skills-header": "Skills & Experience",
       "tech-skills": "Technical Skills",
       "skill-g1": "Data Analysis & BI",
-      "skill-g2": "Development",
+      "skill-g2": "Web Development",
       "skill-g3": "Management",
       s1: "Power BI & DAX:",
       "s1-d": "Advanced Data Modeling & What-If Analysis.",
@@ -49,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "s4-d": "Statistical analysis and financial modeling.",
       s5: "HTML5 & CSS3:",
       "s5-d": "Building fully responsive interfaces.",
-      s6: "JS & Bootstrap:",
+      s6: "JavaScript & Bootstrap:",
       "s6-d": "Adding interactivity and layout styling.",
       s7: "Git & GitHub:",
       "s7-d": "Version control and project documentation.",
@@ -60,9 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
       "soft2-d": "Breaking down complex problems.",
       soft3: "Data Storytelling",
       "soft3-d": "Turning numbers into stories.",
+      soft4: "Business Mindset",
+      "soft4-d": "Focusing on KPIs.",
+      soft5: "Effective Communication",
+      "soft5-d": "Simplifying results for management.",
       "projects-header": "Featured Projects",
-      "p-goal": "Decision Support",
+      "p1-desc": "Comprehensive analysis for Sallah platform.",
       "next-proj": "Next Project Coming Soon...",
+      "p-tools-title": "Tech Stack:",
       "footer-tagline": "Turning raw data into strategic business impact.",
       "footer-copy": "All Rights Reserved.",
     },
@@ -81,32 +76,37 @@ document.addEventListener("DOMContentLoaded", function () {
       "tech-skills": "المهارات التقنية",
       "skill-g1": "تحليل البيانات والـ BI",
       "skill-g2": "تطوير الويب",
-      "skill-g3": "الإدارة",
-      s1: "Power BI & DAX:",
-      "s1-d": "نماذج بيانات متقدمة وتحليل السيناريوهات.",
+      "skill-g3": "الإدارة والتحكم",
+      s1: "باور بي آي و DAX:",
+      "s1-d": "نمذجة البيانات المتقدمة وتحليل السيناريوهات.",
       s2: "تنظيف البيانات العميق:",
-      "s2-d": "معالجة البيانات الضخمة وتنقيتها.",
-      s3: "SQL & Power Query:",
-      "s3-d": "استخراج وتحويل البيانات (ETL).",
-      s4: "Python & Excel:",
-      "s4-d": "تحليل إحصائي ونمذجة مالية.",
-      s5: "HTML5 & CSS3:",
-      "s5-d": "بناء واجهات ريسبونسيف بالكامل.",
-      s6: "JS & Bootstrap:",
-      "s6-d": "إضافة التفاعل وتنسيق الشاشات.",
-      s7: "Git & GitHub:",
-      "s7-d": "توثيق وإدارة إصدارات المشاريع.",
-      "biz-skills": "مهارات البيزنس",
-      soft1: "فهم البيزنس",
-      "soft1-d": "ربط البيانات بأهداف الشركة الاستراتيجية.",
+      "s2-d": "التعامل مع مجموعات البيانات الضخمة وتنظيفها.",
+      s3: "SQL و Power Query:",
+      "s3-d": "عمليات ETL وتحويل البيانات الجاهزة للتحليل.",
+      s4: "بايثون وإكسيل متقدم:",
+      "s4-d": "التحليل الإحصائي والنمذجة المالية الدقيقة.",
+      s5: "HTML5 و CSS3:",
+      "s5-d": "بناء واجهات مستخدم متجاوبة بالكامل.",
+      s6: "JS و Bootstrap:",
+      "s6-d": "إضافة التفاعل وتنسيق تخطيطات الصفحات.",
+      s7: "Git و GitHub:",
+      "s7-d": "التحكم في الإصدارات وتوثيق المشاريع تقنياً.",
+      "biz-skills": "مهارات الأعمال",
+      soft1: "فهم متطلبات العمل",
+      "soft1-d": "ربط تحليل البيانات بأهداف الشركة الاستراتيجية.",
       soft2: "التفكير التحليلي",
-      "soft2-d": "تفكيك المشاكل المعقدة والوصول للحلول.",
-      soft3: "Data Storytelling",
-      "soft3-d": "تحويل الأرقام لقصص بصرية مفهومة.",
-      "projects-header": "أبرز الأعمال",
-      "p-goal": "دعم اتخاذ القرار",
+      "soft2-d": "تفكيك المشكلات المعقدة والوصول للحلول.",
+      soft3: "حكي القصص بالبيانات",
+      "soft3-d": "تحويل الأرقام الصماء إلى قصص مفهومة وجذابة.",
+      soft4: "عقلية صاحب العمل",
+      "soft4-d": "التركيز على مؤشرات الأداء الأساسية (KPIs).",
+      soft5: "التواصل الفعال",
+      "soft5-d": "تبسيط النتائج المعقدة للإدارة بوضوح.",
+      "projects-header": "المشاريع المميزة",
+      "p1-desc": "تحليل شامل لبيانات منصة سلة.",
       "next-proj": "المشروع القادم قريباً...",
-      "footer-tagline": "تحويل البيانات الخام إلى أثر استراتيجي للأعمال.",
+      "p-tools-title": "التقنيات المستخدمة:",
+      "footer-tagline": "تحويل البيانات الخام إلى أثر استراتيجي ملموس للأعمال.",
       "footer-copy": "جميع الحقوق محفوظة.",
     },
   };
@@ -117,12 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById("nav-menu");
 
   let currentLang = localStorage.getItem("lang") || "en";
-  let currentTheme = localStorage.getItem("theme") || "light";
+  let currentTheme = localStorage.getItem("theme") || "dark";
 
   function updateLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-    langBtn.textContent = lang === "en" ? "العربية" : "English";
+    // تعديل نص الزر: لو الحالي إنجليزي اظهر AR، لو عربي اظهر EN
+    langBtn.textContent = lang === "en" ? "AR" : "EN";
+
     document.querySelectorAll("[data-key]").forEach((el) => {
       const key = el.getAttribute("data-key");
       if (translations[lang][key]) el.innerHTML = translations[lang][key];
@@ -134,8 +136,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const icon = themeBtn.querySelector("i");
     if (theme === "dark") {
       document.body.classList.add("dark-theme");
+      document.body.classList.remove("light-theme");
       icon.classList.replace("fa-moon", "fa-sun");
     } else {
+      document.body.classList.add("light-theme");
       document.body.classList.remove("dark-theme");
       icon.classList.replace("fa-sun", "fa-moon");
     }

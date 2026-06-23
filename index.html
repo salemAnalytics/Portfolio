@@ -9,46 +9,53 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="dark-theme"> <!-- الافتراضي دارك مود -->
 
     <!-- Mouse Follower Elements -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <!-- أزرار التحكم العائمة (أسفل اليسار) -->
+    <!-- Floating Controls -->
     <div class="floating-controls">
-        <a href="https://wa.me/201092296041" class="control-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <button id="theme-btn" class="control-btn theme-toggle"><i class="fas fa-moon"></i></button>
+        <a href="https://wa.me/201092296041" class="control-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <button id="theme-btn" class="control-btn theme-toggle"><i class="fas fa-sun"></i></button>
         <button id="lang-btn" class="control-btn lang-switch">العربية</button>
     </div>
 
-    <!-- النافبار -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">Salem<span>Analytics</span></a>
+            
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#home" data-key="nav-home">Home</a></li>
                 <li><a href="#skills" data-key="nav-skills">Skills</a></li>
                 <li><a href="#projects" data-key="nav-projects">Projects</a></li>
                 <li><a href="#contact" data-key="nav-contact">Contact</a></li>
             </ul>
+
             <div class="nav-right">
-                <div class="header-socials footer-socials">
-                                    <a href="https://github.com/salemAnalytics" target="_blank" class="social-hover github"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ahmed-salem-8a7061406/" target="_blank" class="social-hover linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/ahmed.a.salim.581809" target="_blank" class="social-hover facebook"><i class="fab fa-facebook"></i></a>
+                <div class="header-socials">
+                    <a href="https://github.com/salemAnalytics" target="_blank" class="social-hover"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmed-salem-8a7061406/" target="_blank" class="social-hover"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/ahmed.a.salim.581809" target="_blank" class="social-hover"><i class="fab fa-facebook"></i></a>
                 </div>
                 <div class="menu-icon" id="menu-btn"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </nav>
 
-    <!-- الهيرو سكشن -->
+    <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="container hero-flex">
             <div class="hero-content">
@@ -60,12 +67,12 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/Gemini_Generated_Image_2z8baq2z8baq2z8b.png" alt="Ahmed Salem">
+                <img src="images/HERO.PNG" alt="Ahmed Salem">
             </div>
         </div>
     </header>
 
-    <!-- المهارات -->
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-header" data-key="skills-header">Skills & Experience</h2>
@@ -80,54 +87,67 @@
                     <div class="skill-item"><strong data-key="s4">Python & Advanced Excel:</strong> <span data-key="s4-d">Statistical analysis and financial modeling.</span></div>
                 </div>
                 <div class="skill-group">
-                    <h4 data-key="skill-g2">Development</h4>
-                    <div class="skill-item"><strong data-key="s5">HTML5 & CSS3:</strong> <span data-key="s5-d">Building fully responsive interfaces.</span></div>
-                    <div class="skill-item"><strong data-key="s6">JS & Bootstrap:</strong> <span data-key="s6-d">Adding interactivity and layout styling.</span></div>
+                    <h4 data-key="skill-g2">Web Development</h4>
+                    <div class="skill-item"><strong>HTML5 & CSS3:</strong> <span data-key="s5-d">Building fully responsive interfaces.</span></div>
+                    <div class="skill-item"><strong>JavaScript & Bootstrap:</strong> <span data-key="s6-d">Adding interactivity and layout styling.</span></div>
                 </div>
                 <div class="skill-group">
                     <h4 data-key="skill-g3">Management</h4>
-                    <div class="skill-item"><strong data-key="s7">Git & GitHub:</strong> <span data-key="s7-d">Version control and project documentation.</span></div>
+                    <div class="skill-item"><strong>Git & GitHub:</strong> <span data-key="s7-d">Version control and project documentation.</span></div>
                 </div>
             </div>
 
             <h3 class="skill-category-title secondary"><i class="fas fa-briefcase"></i> <span data-key="biz-skills">Business Skills</span></h3>
-            <div class="soft-skills-grid skill-group">
-                <div class="soft-card"><i class="fas fa-handshake"></i><h3 data-key="soft1">Business Understanding</h3><p data-key="soft1-d">Linking data with company goals.</p></div>
-                <div class="soft-card"><i class="fas fa-magnifying-glass-chart"></i><h3 data-key="soft2">Analytical Thinking</h3><p data-key="soft2-d">Breaking down complex problems.</p></div>
-                <div class="soft-card"><i class="fas fa-book-open"></i><h3 data-key="soft3">Data Storytelling</h3><p data-key="soft3-d">Turning numbers into stories.</p></div>
+            <div class="soft-skills-grid">
+                <div class="soft-card skill-group"><i class="fas fa-handshake"></i><h3 data-key="soft1">Business Understanding</h3><p data-key="soft1-d">Linking data with company goals.</p></div>
+                <div class="soft-card skill-group"><i class="fas fa-magnifying-glass-chart"></i><h3 data-key="soft2">Analytical Thinking</h3><p data-key="soft2-d">Breaking down complex problems.</p></div>
+                <div class="soft-card skill-group"><i class="fas fa-book-open"></i><h3 data-key="soft3">Data Storytelling</h3><p data-key="soft3-d">Turning numbers into understandable stories.</p></div>
+                <div class="soft-card skill-group"><i class="fas fa-chart-line"></i><h3 data-key="soft4">Business Mindset</h3><p data-key="soft4-d">Focusing on KPIs.</p></div>
+                <div class="soft-card skill-group"><i class="fas fa-users"></i><h3 data-key="soft5">Effective Communication</h3><p data-key="soft5-d">Simplifying results for management.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- المشاريع (سلايدر) -->
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-header" data-key="projects-header">Featured Projects</h2>
+            
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     
-                    <!-- مشروع 1 -->
+                    <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="dashboard-container">
-                            <h3 class="dashboard-title">Sallah Call Center Performance Dashboard</h3>
+                            <div class="project-header-box">
+                                <h3 class="dashboard-title">Sallah Call Center Performance Dashboard</h3>
+                                <p class="project-desc" data-key="p1-desc">Comprehensive analysis for Sallah platform (Interact with report below)</p>
+                            </div>
+                            
                             <div class="dashboard-wrapper desktop-report">
                                 <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage" frameborder="0" allowFullScreen="true"></iframe>
                             </div>
                             <div class="dashboard-wrapper mobile-report">
                                 <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage&rc:MobileLayout=true" frameborder="0" allowFullScreen="true"></iframe>
                             </div>
-                            <div class="project-details-pills">
-                                <div class="pill"><i class="fas fa-tools"></i> <strong>Tools:</strong> Power BI, DAX</div>
-                                <div class="pill"><i class="fas fa-bullseye"></i> <span data-key="p-goal">Decision Support</span></div>
+                            
+                            <div class="tools-usage-section">
+                                <h4 data-key="p-tools-title">Tech Stack:</h4>
+                                <div class="project-details-pills">
+                                    <div class="pill">Power BI</div>
+                                    <div class="pill">DAX</div>
+                                    <div class="pill">Power Query</div>
+                                    <div class="pill">Data Modeling</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- مشروع 2 (فارغ جاهز للإضافة) -->
+                    <!-- Slide 2 (Placeholder) -->
                     <div class="swiper-slide">
                         <div class="dashboard-container">
                             <div class="empty-project">
-                                <i class="fas fa-chart-line"></i>
+                                <i class="fas fa-chart-pie"></i>
                                 <p data-key="next-proj">Next Project Coming Soon...</p>
                             </div>
                         </div>
@@ -141,7 +161,7 @@
         </div>
     </section>
 
-    <!-- الفوتر (Modern Minimalist) -->
+    <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="container footer-content">
             <div class="footer-top">
