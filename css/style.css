@@ -223,4 +223,22 @@ body {
     margin-top: 10px;
     padding-top: 15px;
 }
+.hero-image img {
+        width: 230px;
+        height: 230px;
+    }
+.logo {
+    font-size: 1.5rem;
+}
+.header-socials a {
+    color: var(--text-dark);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+.navbar {
+        padding: 12px 0;
+}
+.menu-icon {
+    font-size: 1rem;
+}
 }
