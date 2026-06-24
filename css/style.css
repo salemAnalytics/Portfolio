@@ -197,4 +197,30 @@ body {
     .btn { width: 100%; }
     
     .floating-controls { left: 20px; bottom: 20px; }
+    .section-header {
+        font-size: 2.6rem;
+    }
+    .skill-category-title {
+                font-size: 1.6rem;
+    }
+    .dashboard-title{
+         font-size: 1.8rem;
+    }
+    .footer {
+    padding: 20px 0;
+    background: var(--white);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    }
+    .footer-top a {
+        font-size: 2rem;
+    margin-bottom: 10px;
+    }
+    .footer-content {
+    gap: 20px;
+}
+.footer-bottom {
+    margin-top: 10px;
+    padding-top: 15px;
+}
 }
