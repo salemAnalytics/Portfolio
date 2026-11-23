@@ -1,17 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Mouse Follower
-  const dot = document.querySelector(".cursor-dot");
-  const outline = document.querySelector(".cursor-outline");
-  window.addEventListener("mousemove", (e) => {
-    dot.style.left = `${e.clientX}px`;
-    dot.style.top = `${e.clientY}px`;
-    outline.animate(
-      { left: `${e.clientX}px`, top: `${e.clientY}px` },
-      { duration: 400, fill: "forwards" },
-    );
-  });
-
-  // 2. Translation Dictionary
+  // 1. Translation Dictionary
   const translations = {
     en: {
       title: "Ahmed Salem | Data Analyst",
@@ -58,6 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "p1-desc": "Comprehensive analysis for Sallah platform.",
       "next-proj": "Next Project Coming Soon...",
       "p-tools-title": "Tech Stack:",
+      "mobile-dash-note":
+        "The interactive dashboard opens full-screen so you can explore it comfortably on your phone.",
+      "mobile-dash-btn": "Open live dashboard",
       "footer-tagline": "Turning raw data into strategic business impact.",
       "footer-copy": "All Rights Reserved.",
     },
@@ -106,6 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "p1-desc": "تحليل شامل لبيانات منصة سلة.",
       "next-proj": "المشروع القادم قريباً...",
       "p-tools-title": "التقنيات المستخدمة:",
+      "mobile-dash-note":
+        "الداشبورد التفاعلية بتفتح في صفحة كاملة عشان تقدر تستكشفها براحتك على الموبايل.",
+      "mobile-dash-btn": "افتح الداشبورد المباشرة",
       "footer-tagline": "تحويل البيانات الخام إلى أثر استراتيجي ملموس للأعمال.",
       "footer-copy": "جميع الحقوق محفوظة.",
     },
@@ -122,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-    // تعديل نص الزر: لو الحالي إنجليزي اظهر AR، لو عربي اظهر EN
     langBtn.textContent = lang === "en" ? "AR" : "EN";
 
     document.querySelectorAll("[data-key]").forEach((el) => {
@@ -160,6 +153,16 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.toggle("active");
     menuBtn.querySelector("i").classList.toggle("fa-bars");
     menuBtn.querySelector("i").classList.toggle("fa-xmark");
+  });
+
+  // Close the mobile menu after picking a link
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      const icon = menuBtn.querySelector("i");
+      icon.classList.add("fa-bars");
+      icon.classList.remove("fa-xmark");
+    });
   });
 
   new Swiper(".mySwiper", {
