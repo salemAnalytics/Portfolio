@@ -235,7 +235,7 @@ a:focus-visible, button:focus-visible {
     .nav-links li { margin: 10px 0; }
 
     .hero { padding: 100px 0 50px; }
-    .hero-btns { flex-direction: column; width: 100%; max-width: 340px; margin: 0 auto; }
+    .hero-btns { flex-direction: column; width: 100%; max-width: 280px; margin: 0 auto; }
     .btn { width: 100%; }
     .hero-image img { width: 220px; height: 220px; }
 
