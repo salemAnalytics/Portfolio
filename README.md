@@ -6,17 +6,17 @@ My personal portfolio website as a data analyst.
 
 ## What's Inside
 
-- Responsive single-page portfolio with dark theme, built with HTML5, CSS3 and vanilla JavaScript (English and Arabic)
-- Skills section: Power BI & DAX, SQL & Power Query, Python, advanced Excel, plus HTML, CSS, JavaScript, Bootstrap and React for web work
-- Featured project with the live interactive report embedded in the page
+- Responsive single-page portfolio built with HTML5, CSS3 and vanilla JavaScript, in English and Arabic
+- Skills: SQL, Python, Power BI, DAX, Power Query and Excel, plus HTML, CSS, JavaScript, Bootstrap and React for web work. Currently learning Tableau.
+- Selected work: a preview of the Sallah report with a button that loads the live interactive version
 - Contact links: LinkedIn, GitHub, WhatsApp
 
 ## Featured Project: Sallah Call Center Performance Dashboard
 
-An interactive Power BI report analyzing call center performance for the Sallah platform, embedded live in the site so visitors can explore it directly.
+An interactive Power BI report analyzing call center performance for the Sallah platform, viewable and explorable live from the site.
 
 - **Tools:** Power BI, DAX, Power Query, Data Modeling
-- **Try it:** open the [live portfolio](https://salemanalytics.github.io/Portfolio/) and interact with the report in the Featured Projects section
+- **Try it:** open the [live portfolio](https://salemanalytics.github.io/Portfolio/) and press "Explore it live" in the Selected work section
 
 ## Screenshot
 
