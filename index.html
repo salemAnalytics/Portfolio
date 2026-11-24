@@ -121,18 +121,15 @@
                                 <p class="project-desc" data-key="p1-desc">Comprehensive analysis for Sallah platform (Interact with report below)</p>
                             </div>
 
-                            <div class="dashboard-wrapper desktop-report">
+                            <div class="dashboard-wrapper">
                                 <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage" frameborder="0" allowFullScreen="true" title="Sallah Call Center Performance Dashboard"></iframe>
                             </div>
 
-                            <!-- Mobile: Power BI "Publish to web" cannot render the report's phone
-                                 layout (that needs Power BI Embedded), so phones get a card that
-                                 opens the live report full-screen, where pinch-zoom works.
-                                 If a portrait report page is ever published, its embed URL can
-                                 replace this card with a second iframe. -->
-                            <div class="mobile-report">
-                                <i class="fas fa-chart-column"></i>
-                                <p data-key="mobile-dash-note">The interactive dashboard opens full-screen so you can explore it comfortably on your phone.</p>
+                            <!-- The inline embed shows on every screen size (on phones it is the
+                                 scaled desktop canvas, since publish-to-web cannot render the
+                                 report's phone layout). The button stays available alongside it
+                                 for a full-screen, pinch-zoomable view. -->
+                            <div class="dashboard-actions">
                                 <a class="btn btn-primary" target="_blank" rel="noopener"
                                    href="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage"
                                    data-key="mobile-dash-btn">Open live dashboard</a>
