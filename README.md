@@ -7,7 +7,7 @@ My personal portfolio website as a data analyst.
 ## What's Inside
 
 - Responsive single-page portfolio with dark theme, built with HTML5, CSS3 and vanilla JavaScript (English and Arabic)
-- Skills section: Power BI & DAX, SQL & Power Query, Python, advanced Excel
+- Skills section: Power BI & DAX, SQL & Power Query, Python, advanced Excel, plus HTML, CSS, JavaScript, Bootstrap and React for web work
 - Featured project with the live interactive report embedded in the page
 - Contact links: LinkedIn, GitHub, WhatsApp
 
