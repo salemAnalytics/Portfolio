@@ -1,189 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ahmed Salem - Data Analyst portfolio. Power BI, SQL, Python and Excel projects, including a live interactive call center performance dashboard.">
-    <meta name="theme-color" content="#0e1512">
-    <title data-key="title">Ahmed Salem | Data Analyst</title>
-    <link rel="icon" type="image/png" href="images/analysis (1).png">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ahmed Salem, data analyst in Cairo. Power BI dashboards, SQL and Excel reporting.">
+<meta name="theme-color" content="#f3eee4">
+<title data-key="title">Ahmed Salem | Data Analyst</title>
+<link rel="icon" type="image/png" href="images/analysis (1).png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="dark-theme">
+<body>
+<header class="top">
+  <a class="mark" href="#top">Ahmed Salem</a>
+  <nav>
+    <a href="#work" data-key="nav-work">Work</a>
+    <a href="#toolkit" data-key="nav-toolkit">Skills</a>
+    <a href="#path" data-key="nav-path">Background</a>
+    <a href="#contact" data-key="nav-contact">Contact</a>
+    <button id="lang-btn" type="button" aria-label="Switch language">AR</button>
+  </nav>
+</header>
 
-    <!-- Floating Controls -->
-    <div class="floating-controls">
-        <a href="https://wa.me/201092296041" class="control-btn whatsapp" target="_blank" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <button id="theme-btn" class="control-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-        <button id="lang-btn" class="control-btn lang-switch" aria-label="Switch language">AR</button>
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker" data-key="kicker">Data analyst · Cairo</p>
+    <h1 data-key="h1">I turn raw data into reports people can act on.</h1>
+    <p class="lead" data-key="lead">Power BI, DAX and SQL, with Excel and Python alongside. Freelance since January 2025.</p>
+    <div class="actions">
+      <a class="btn solid" href="#work" data-key="btn-work">See the dashboard</a>
+      <a class="btn" href="Ahmed-Salem-CV.pdf" download data-key="btn-cv">Download CV</a>
     </div>
+  </div>
+  <figure class="portrait"><img src="images/hero.png" alt="Ahmed Salem"></figure>
+</section>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Salem <span>Analytics</span></a>
+<section id="work" class="block">
+  <h2><span class="num">01</span><span data-key="work-h">Selected work</span></h2>
+  <div class="work-intro">
+    <h3>Sallah Call Center Performance Dashboard</h3>
+    <div>
+      <p data-key="w-p1">An interactive Power BI report on call center performance, built for a client. I prepared the data, wrote the DAX measures and designed the report.</p>
+      <p data-key="w-p2">It tracks the main KPIs, compares forecast against actual, and has a what-if scenario for call volume.</p>
+      <p class="tools"><span data-key="w-tools">Tools</span>: <bdi>Power BI · Power Query · DAX</bdi></p>
+    </div>
+  </div>
+  <div class="embed" id="embed">
+    <img src="images/sallah-dashboard.svg" alt="Sallah Call Center Performance dashboard: KPI cards, calls offered vs forecast by month, service level by project">
+  </div>
+  <p class="swipe-hint" data-key="hint"></p><p class="embed-note"><button type="button" id="live-btn" class="btn solid" data-key="w-live">Explore it live</button> <a class="btn" target="_blank" rel="noopener" href="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage" data-key="w-open">Open full screen</a></p>
+  <p class="more" data-key="w-more">Earlier web work: a data management app for operations data, and a responsive site for a land-listing business.</p>
+</section>
 
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="#home" data-key="nav-home">Home</a></li>
-                <li><a href="#skills" data-key="nav-skills">Skills</a></li>
-                <li><a href="#projects" data-key="nav-projects">Projects</a></li>
-                <li><a href="#contact" data-key="nav-contact">Contact</a></li>
-            </ul>
+<section id="toolkit" class="block">
+  <h2><span class="num">02</span><span data-key="tk-h">Skills</span></h2>
+  <dl class="kit">
+    <div><dt data-key="k1">Analysis</dt><dd data-key="k1-d">SQL, Python, data cleaning and validation, KPI tracking, trend analysis</dd></div>
+    <div><dt data-key="k2">Reporting</dt><dd data-key="k2-d">Power BI, DAX, Power Query, Excel, report design</dd></div>
+    <div><dt data-key="k3">Web, on the side</dt><dd data-key="k3-d">HTML, CSS, JavaScript, Bootstrap, React</dd></div>
+    <div><dt data-key="k4">Learning now</dt><dd data-key="k4-d">Tableau</dd></div>
+  </dl>
+</section>
 
-            <div class="nav-right">
-                <div class="header-socials">
-                    <a href="https://github.com/salemAnalytics" target="_blank" class="social-hover" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/ahmed-salem-8a7061406/" target="_blank" class="social-hover" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/ahmed.a.salim.581809" target="_blank" class="social-hover" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                </div>
-                <div class="menu-icon" id="menu-btn"><i class="fas fa-bars"></i></div>
-            </div>
-        </div>
-    </nav>
+<section id="path" class="block">
+  <h2><span class="num">03</span><span data-key="bg-h">Background</span></h2>
+  <ol class="path">
+    <li><span class="when" data-key="b1-w">Jan 2025 – now</span><div><strong data-key="b1-t">Freelance data analyst</strong><p data-key="b1-d">Dashboards and KPI reporting in Power BI, with SQL, Python and Excel behind them.</p></div></li>
+    <li><span class="when" data-key="b2-w">Apr 2023 – Mar 2025</span><div><strong data-key="b2-t">Freelance front-end developer</strong><p data-key="b2-d">Responsive, data-driven interfaces: a product catalog with dynamic filtering, a data management app, and reporting-style UI components.</p></div></li>
+    <li><span class="when" data-key="b3-w">Jun – Aug 2023</span><div><strong data-key="b3-t">Data entry intern, Egypt's Food Company</strong><p data-key="b3-d">Entered, checked and organized company records.</p></div></li>
+    <li><span class="when">2024</span><div><strong data-key="b4-t">Bachelor's degree in Management Information Systems</strong></div></li>
+  </ol>
+</section>
+</main>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="container hero-flex">
-            <div class="hero-content">
-                <h1 data-key="hero-h1">Hi, I'm <span class="highlight">Ahmed Salem</span></h1>
-                <p data-key="hero-p">Data Analyst specialized in turning complex data into strategic insights.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary" data-key="btn-view">View Projects</a>
-                    <a href="Ahmed-Salem-CV.pdf" download class="btn btn-outline" data-key="btn-cv">Download CV</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero.png" alt="Ahmed Salem">
-            </div>
-        </div>
-    </header>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-header" data-key="skills-header">Skills & Experience</h2>
-            <h3 class="skill-category-title"><i class="fas fa-laptop-code"></i> <span data-key="tech-skills">Technical Skills</span></h3>
-            <div class="skills-groups-container">
-                <div class="skill-group">
-                    <h4 data-key="skill-g1">Data Analysis & BI</h4>
-                    <div class="skill-item"><strong data-key="s1">Power BI & DAX:</strong> <span data-key="s1-d">Advanced Data Modeling & What-If Analysis.</span></div>
-                    <div class="skill-item"><strong data-key="s2">Deep Data Cleaning:</strong> <span data-key="s2-d">Handling large datasets and cleaning.</span></div>
-                    <div class="skill-item"><strong data-key="s3">SQL & Power Query:</strong> <span data-key="s3-d">ETL processes and Data Transformation.</span></div>
-                    <div class="skill-item"><strong data-key="s4">Python & Advanced Excel:</strong> <span data-key="s4-d">Data analysis, cleaning and reporting.</span></div>
-                </div>
-                <div class="skill-group">
-                    <h4 data-key="skill-g2">Web Development</h4>
-                    <div class="skill-item"><strong>HTML5 & CSS3:</strong> <span data-key="s5-d">Building fully responsive interfaces.</span></div>
-                    <div class="skill-item"><strong data-key="s6">JavaScript, Bootstrap & React:</strong> <span data-key="s6-d">Adding interactivity and layout styling.</span></div>
-                </div>
-                <div class="skill-group">
-                    <h4 data-key="skill-g3">Management</h4>
-                    <div class="skill-item"><strong>Git & GitHub:</strong> <span data-key="s7-d">Version control and project documentation.</span></div>
-                </div>
-            </div>
-
-            <h3 class="skill-category-title secondary"><i class="fas fa-briefcase"></i> <span data-key="biz-skills">Business Skills</span></h3>
-            <div class="soft-skills-grid">
-                <div class="soft-card skill-group"><i class="fas fa-handshake"></i><h3 data-key="soft1">Business Understanding</h3><p data-key="soft1-d">Linking data with company goals.</p></div>
-                <div class="soft-card skill-group"><i class="fas fa-magnifying-glass-chart"></i><h3 data-key="soft2">Analytical Thinking</h3><p data-key="soft2-d">Breaking down complex problems.</p></div>
-                <div class="soft-card skill-group"><i class="fas fa-book-open"></i><h3 data-key="soft3">Data Storytelling</h3><p data-key="soft3-d">Turning numbers into understandable stories.</p></div>
-                <div class="soft-card skill-group"><i class="fas fa-chart-line"></i><h3 data-key="soft4">Business Mindset</h3><p data-key="soft4-d">Focusing on KPIs.</p></div>
-                <div class="soft-card skill-group"><i class="fas fa-users"></i><h3 data-key="soft5">Effective Communication</h3><p data-key="soft5-d">Simplifying results for management.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-header" data-key="projects-header">Featured Projects</h2>
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="dashboard-container">
-                            <div class="project-header-box">
-                                <h3 class="dashboard-title">Sallah Call Center Performance Dashboard</h3>
-                                <p class="project-desc" data-key="p1-desc">Comprehensive analysis for Sallah platform (Interact with report below)</p>
-                            </div>
-
-                            <div class="dashboard-wrapper">
-                                <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage" frameborder="0" allowFullScreen="true" title="Sallah Call Center Performance Dashboard"></iframe>
-                            </div>
-
-                            <!-- The inline embed shows on every screen size (on phones it is the
-                                 scaled desktop canvas, since publish-to-web cannot render the
-                                 report's phone layout). The button stays available alongside it
-                                 for a full-screen, pinch-zoomable view. -->
-                            <div class="dashboard-actions">
-                                <a class="btn btn-primary" target="_blank" rel="noopener"
-                                   href="https://app.powerbi.com/view?r=eyJrIjoiMTgxYjhhMzEtYzE5MC00OTMwLTgxZGMtZjk2NGVmMWZlOTA5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9&pageView=fitToPage"
-                                   data-key="mobile-dash-btn">Open live dashboard</a>
-                            </div>
-
-                            <div class="tools-usage-section">
-                                <h4 data-key="p-tools-title">Tech Stack:</h4>
-                                <div class="project-details-pills">
-                                    <div class="pill">Power BI</div>
-                                    <div class="pill">DAX</div>
-                                    <div class="pill">Power Query</div>
-                                    <div class="pill">Data Modeling</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 (Placeholder) -->
-                    <div class="swiper-slide">
-                        <div class="dashboard-container">
-                            <div class="empty-project">
-                                <i class="fas fa-chart-pie"></i>
-                                <p data-key="next-proj">Next Project Coming Soon...</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container footer-content">
-            <div class="footer-top">
-                <a href="#" class="logo">Salem <span>Analytics</span></a>
-                <p data-key="footer-tagline">Turning raw data into strategic business impact.</p>
-            </div>
-            <div class="footer-socials">
-                <a href="https://github.com/salemAnalytics" target="_blank" class="social-hover github" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ahmed-salem-8a7061406/" target="_blank" class="social-hover linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/ahmed.a.salim.581809" target="_blank" class="social-hover facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 <span class="highlight">Ahmed Salem</span>. <span data-key="footer-copy">All Rights Reserved.</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+<footer id="contact">
+  <h2 data-key="c-h">Have data that needs a clear report?</h2>
+  <p data-key="c-p">Message me on WhatsApp, or find me on LinkedIn and GitHub.</p>
+  <div class="actions">
+    <a class="btn solid" href="https://wa.me/201092296041" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn" href="https://www.linkedin.com/in/ahmed-salem-8a7061406/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/salemAnalytics" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <p class="fine">© 2026 Ahmed Salem</p>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
